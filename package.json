@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/victorandradelima/opr-react-hr-portal_new/issues"
   },
-  "homepage": "https://github.com/victorandradelima/opr-react-hr-portal_new#readme"
+  "homepage": "https://github.com/victorandradelima/opr-react-hr-portal_new#readme",
+  "devDependencies": {
+    "git-commit-msg-linter": "^2.4.4"
+  }
 }
