@@ -8,14 +8,10 @@
   box-sizing: border-box;
 }
 .login{
-  display: flex;
+  display: flex;            
   flex-direction: column;
   min-height: 100vh;
-  justify-content: space-between;
-
-  .header{
-    background-color: $primary;
-  }
+  justify-content: center;
   .form{
     .contentForm{
       max-width: 680px;
@@ -60,8 +56,6 @@
             }
           }
         }
-
-
       }
       .imgFormBox{
         flex: 2;
@@ -75,8 +69,5 @@
         }
       }
     }
-  }
-  .footer{
-    background-color: $primary;
   }
 }

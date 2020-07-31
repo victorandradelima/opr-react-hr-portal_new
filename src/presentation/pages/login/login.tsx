@@ -12,7 +12,6 @@ import Logo from '@/presentation/components/logo/logo'
 const Login: React.FC = () => {
   return (
     <div className={Styles.login}>
-      <header className={Styles.header}></header>
       <div className={Styles.form}>
         <div className={Styles.contentForm}>
           <Card className={Styles.cardContent}>
@@ -69,8 +68,6 @@ const Login: React.FC = () => {
           </Card>
         </div>
       </div>
-      <footer className={Styles.footer}></footer>
-
     </div>
   )
 }
