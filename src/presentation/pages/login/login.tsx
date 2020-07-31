@@ -1,13 +1,13 @@
 import React from 'react'
 import Styles from './login-styles.scss'
 import Card from '@material-ui/core/Card'
-import Spinner from '@/presentation/components/spinner/spinner'
 import Button from '@material-ui/core/Button'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
 import Logo from '@/presentation/components/logo/logo'
 import Input from '@/presentation/components/input/input'
+import FormStatus from '@/presentation/components/form-status/form-status'
 
 const Login: React.FC = () => {
   return (
@@ -26,12 +26,7 @@ const Login: React.FC = () => {
                     <Input id="email" type={'text'} name="email" label="E-mail" />
                     <Input id="password" type={'password'} name="password" label="Senha"/>
                     <Button type="submit" variant="contained" color="primary" className={[Styles.submit, Styles.bgPrimary].join(' ')}>Entrar</Button>
-                    <div className={Styles.errorWrap}>
-                      <Spinner className={Styles.spinner} />
-                      <span className={Styles.error}>
-                        Mensagem de erro
-                      </span>
-                    </div>
+                    <FormStatus />
                   </form>
                 </div>
               </Container>
