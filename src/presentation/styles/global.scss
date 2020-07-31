@@ -1,0 +1,32 @@
+@import './colors.scss';
+
+* {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.bgPrimary{
+  background-color: $primary !important;
+}
+
+.colorPrimary{
+  color: $primary !important;
+}
+
+.bgPrimaryDark{
+  background-color: $primaryDark !important;
+}
+
+.colorPrimaryDark{
+  color: $primaryDark !important;
+}
+
+.bgPrimaryLight{
+  background-color: $primaryLight !important;
+}
+
+.colorPrimaryLight{
+  color: $primaryLight !important;
+}
