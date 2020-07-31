@@ -1,13 +1,7 @@
 import React from 'react'
 import Styles from './login-styles.scss'
-import Card from '@material-ui/core/Card'
-import Button from '@material-ui/core/Button'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import Typography from '@material-ui/core/Typography'
-import Container from '@material-ui/core/Container'
-import Logo from '@/presentation/components/logo/logo'
-import Input from '@/presentation/components/input/input'
-import FormStatus from '@/presentation/components/form-status/form-status'
+import { Card, Button, Typography, Container } from '@material-ui/core'
+import { Input, Logo, FormStatus } from '@/presentation/components'
 
 const Login: React.FC = () => {
   return (
@@ -17,7 +11,6 @@ const Login: React.FC = () => {
           <Card className={Styles.cardContent}>
             <div className={Styles.formLogin}>
               <Container component="main">
-                <CssBaseline />
                 <div className={Styles.formWrap}>
                   <Typography component="h1" variant="h5">
                     Portal do RH
