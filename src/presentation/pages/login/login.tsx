@@ -6,8 +6,8 @@ import Button from '@material-ui/core/Button'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
-import { FormControl, InputAdornment, OutlinedInput, InputLabel } from '@material-ui/core'
 import Logo from '@/presentation/components/logo/logo'
+import Input from '@/presentation/components/input/input'
 
 const Login: React.FC = () => {
   return (
@@ -23,35 +23,9 @@ const Login: React.FC = () => {
                     Portal do RH
                   </Typography>
                   <form className={Styles.form} noValidate>
-                    <FormControl className={Styles.formControl} variant="outlined">
-                      <InputLabel htmlFor="email">E-mail</InputLabel>
-                      <OutlinedInput
-                        id="email"
-                        type={'text'}
-                        name="email"
-                        endAdornment={<InputAdornment position="end">🟢</InputAdornment>}
-                        labelWidth={70}
-                      />
-                    </FormControl>
-                    <FormControl className={Styles.formControl} variant="outlined">
-                      <InputLabel htmlFor="password">Senha</InputLabel>
-                      <OutlinedInput
-                        id="password"
-                        type={'password'}
-                        name="password"
-                        endAdornment={<InputAdornment position="end">🔴</InputAdornment>}
-                        labelWidth={70}
-                      />
-                    </FormControl>
-                    <Button
-                      type="submit"
-                      variant="contained"
-                      color="primary"
-                      className={Styles.submit}
-                      disabled
-                    >
-                      Entrar
-                    </Button>
+                    <Input id="email" type={'text'} name="email" label="E-mail" />
+                    <Input id="password" type={'password'} name="password" label="Senha"/>
+                    <Button type="submit" variant="contained" color="primary" className={[Styles.submit, Styles.bgPrimary].join(' ')}>Entrar</Button>
                     <div className={Styles.errorWrap}>
                       <Spinner className={Styles.spinner} />
                       <span className={Styles.error}>
