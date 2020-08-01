@@ -4,15 +4,12 @@ import { Card, Button, Typography, Container } from '@material-ui/core'
 import { Input, Logo, FormStatus } from '@/presentation/components'
 import Context from '@/presentation/contexts/form/form-context'
 
-type StateProps = {
-  isLoading: boolean
-  errorMessage: string
-}
-
 const Login: React.FC = () => {
   const [state] = useState({
     isLoading: false,
-    errorMessage: ''
+    errorMessage: '',
+    emailError: 'Campo obrigatório',
+    passwordError: 'Campo obrigatório'
   })
   return (
     <div className={Styles.login}>
