@@ -15,7 +15,7 @@ const Input: React.FC<Props> = (props: Props) => {
   const handleChange = (event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
     setState({
       ...state,
-      [event.target.name]: [event.target.value]
+      [event.target.name]: event.target.value
     })
   }
 
@@ -30,7 +30,7 @@ const Input: React.FC<Props> = (props: Props) => {
   return (
     <FormControl className={Styles.formControl} variant="outlined">
       <InputLabel htmlFor={props.id} >{props.label}</InputLabel>
-      <OutlinedInput {...props} data-testid={props.name} labelWidth={70} endAdornment={<InputAdornment data-testid={`${props.name}-status`} title={getTitle()} position="end" >{getStatus()}</InputAdornment>} inputProps={{ readOnly: true }} onFocus={enableInput} onChange={handleChange}/>
+      <OutlinedInput {...props} data-testid={props.name} labelWidth={70} endAdornment={<InputAdornment data-testid={`${props.name}-status`} title={getTitle()} position="end" >{getStatus()}</InputAdornment>} inputProps={{ readOnly: true, 'data-testid': `${props.name}-input` }} onFocus={enableInput} onChange={handleChange}/>
     </FormControl>
   )
 }
