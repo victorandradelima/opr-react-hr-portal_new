@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, RenderResult, cleanup } from '@testing-library/react'
+import { render, RenderResult, cleanup, fireEvent } from '@testing-library/react'
 import Login from './login'
 import { Validation } from '@/presentation/protocols/validation'
 
@@ -47,13 +47,12 @@ describe('Login Component', () => {
     expect(passwordStatus.textContent).toBe('🔴')
   })
 
-  // Este teste não está funcionando pois o fireEvent.input não reconhece o input dentro do componente do MaterialUI
-  // test('Should call Validation with correct email value', () => {
-  //   const { sut, validationSpy } = makeSut()
-  //   const emailInput = sut.getByTestId('email')
-  //   fireEvent.input(emailInput, { target: { value: 'any_email' } })
-  //   expect(validationSpy.input).toEqual({
-  //     email: 'any_email'
-  //   })
-  // })
+  test('Should call Validation with correct email value', () => {
+    const { sut, validationSpy } = makeSut()
+    const emailInput = sut.getByTestId('email-input')
+    fireEvent.input(emailInput, { target: { value: 'any_email' } })
+    expect(validationSpy.input).toEqual({
+      email: 'any_email'
+    })
+  })
 })
