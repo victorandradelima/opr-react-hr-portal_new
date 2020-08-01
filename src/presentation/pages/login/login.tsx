@@ -29,7 +29,7 @@ const Login: React.FC = () => {
                     <form className={Styles.form} noValidate>
                       <Input id="email" type={'text'} name="email" label="E-mail" />
                       <Input id="password" type={'password'} name="password" label="Senha"/>
-                      <Button type="submit" variant="contained" color="primary" className={[Styles.submit, Styles.bgPrimary].join(' ')}>Entrar</Button>
+                      <Button type="submit" disabled data-testid="submit" variant="contained" color="primary" className={[Styles.submit, Styles.bgPrimary].join(' ')}>Entrar</Button>
                       <FormStatus />
                     </form>
                   </Context.Provider>
