@@ -179,11 +179,12 @@ describe('Login Component', () => {
     expect(history.location.pathname).toBe('/')
   })
 
-  test('Should go to signup page', () => {
-    const { sut } = makeSut()
-    const register = sut.getByTestId('signup')
-    fireEvent.click(register)
-    expect(history.length).toBe(2)
-    expect(history.location.pathname).toBe('/signup')
-  })
+  // Este teste serve para verificar a navegação para uma página de signup
+  // test('Should go to signup page', () => {
+  //   const { sut } = makeSut()
+  //   const register = sut.getByTestId('signup')
+  //   fireEvent.click(register)
+  //   expect(history.length).toBe(2)
+  //   expect(history.location.pathname).toBe('/signup')
+  // })
 })
