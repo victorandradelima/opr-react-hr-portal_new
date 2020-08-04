@@ -140,8 +140,10 @@ describe('Login Component', () => {
     const password = faker.internet.password()
     await simulateValidSubmit(sut, email, password)
     expect(authenticationSpy.params).toEqual({
-      email,
-      password
+      idType: 'Email',
+      idValue: email,
+      password: password,
+      platform: 'web'
     })
   })
 
