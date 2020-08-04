@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import Styles from './login-styles.scss'
 import { Card, Button, Typography, Container } from '@material-ui/core'
 import { Input, Logo, FormStatus } from '@/presentation/components'
@@ -73,7 +73,7 @@ const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
                       <Input id="email" type={'text'} name="email" label="E-mail" />
                       <Input id="password" type={'password'} name="password" label="Senha"/>
                       <Button type="submit" disabled={!!state.emailError || !!state.passwordError} data-testid="submit" variant="contained" color="primary" className={[Styles.submit, Styles.bgPrimary].join(' ')}>Entrar</Button>
-                      <Link data-testid="signup" to="/signup" >Criar Conta</Link>
+                      {/* <Link data-testid="signup" to="/signup" >Criar Conta</Link> */}
                       <FormStatus />
                     </form>
                   </Context.Provider>
