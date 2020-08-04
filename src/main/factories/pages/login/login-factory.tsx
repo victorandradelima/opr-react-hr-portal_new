@@ -5,7 +5,7 @@ import { AxiosHttpClient } from '@/infra/http/axios-http-client/axios-http-clien
 import { ValidationComposite, ValidationBuilder } from '@/validation/validators'
 
 export const makeLogin: React.FC = () => {
-  const url = 'http://fordevs.herokuapp.com/api/login'
+  const url = 'http://traefik.development.ali-credito.internal/token/api/token/users/login'
   const axiosHttpClient = new AxiosHttpClient()
   const remoteAuthentication = new RemoteAuthentication(url, axiosHttpClient)
   const validationComposite = ValidationComposite.build([

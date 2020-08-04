@@ -43,8 +43,10 @@ const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
         isLoading: true
       })
       const account = await authentication.auth({
-        email: state.email,
-        password: state.password
+        idType: 'Email',
+        idValue: state.email,
+        password: state.password,
+        platform: 'web'
       })
       localStorage.setItem('accessToken', account.accessToken)
       history.replace('/')
