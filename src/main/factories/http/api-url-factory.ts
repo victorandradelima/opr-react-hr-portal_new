@@ -1,3 +1,3 @@
 export const makeApiUrl = (path: string): string => {
-  return `http://traefik.development.ali-credito.internal${path}`
+  return `process.env.API_URL${path}`
 }
