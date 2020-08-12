@@ -1,8 +1,9 @@
 {
   "name": "opr-react-hr-portal_new",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Base Project to use Ali Suite with TDD, Clean Architecture, and Typescript",
+  "author": "Victor Lima - Ali Crédito",
+  "license": "ISC",
   "scripts": {
     "start": "webpack-dev-server --open",
     "test": "jest --passWithNoTests --no-cache --runInBand",
@@ -10,17 +11,6 @@
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/victorandradelima/opr-react-hr-portal_new.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/victorandradelima/opr-react-hr-portal_new/issues"
-  },
-  "homepage": "https://github.com/victorandradelima/opr-react-hr-portal_new#readme",
   "devDependencies": {
     "@testing-library/react": "^10.4.7",
     "@types/axios": "^0.14.0",
