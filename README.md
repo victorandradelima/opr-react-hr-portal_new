@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/victorandradelima/opr-react-hr-portal_new.svg?branch=master)](https://travis-ci.org/victorandradelima/opr-react-hr-portal_new)
+
 # opr-react-hr-portal_new
 
 Este projeto possui o package git-commit-msg-linter, que irá forçar os commit usando o padrão do Conventional Commits https://www.conventionalcommits.org/
