@@ -12,5 +12,5 @@ export const mockAuthentication = (): AuthenticationParams => ({
 export const mockAccountModel = (): AccountModel => ({
   accessToken: faker.random.uuid(),
   created: `${Date.now()}`,
-  expiration: `${faker.date.future(1)}`
+  expiration: faker.date.future(1).toString()
 })
