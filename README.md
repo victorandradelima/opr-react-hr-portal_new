@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/victorandradelima/opr-react-hr-portal_new.svg?branch=master)](https://travis-ci.org/victorandradelima/opr-react-hr-portal_new)
+[![Coverage Status](https://coveralls.io/repos/github/victorandradelima/opr-react-hr-portal_new/badge.svg?branch=master)](https://coveralls.io/github/victorandradelima/opr-react-hr-portal_new?branch=master)
 
 # opr-react-hr-portal_new
 
