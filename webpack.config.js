@@ -51,7 +51,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new DefinePlugin({
-      'process.env.API_URL': 'http://traefik.development.ali-credito.internal'
+      'process.env.API_URL': JSON.stringify('http://kong-pub.development.ali-credito.internal')
     })
   ]
 }

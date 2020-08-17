@@ -2,6 +2,7 @@ import { HttpPostClient, HttpStatusCode } from '@/data/protocols/http'
 import { AuthenticationParams, Authentication } from '@/domain/usecases'
 import { InvalidCredentialsError, UnexpectedError } from '@/domain/errors'
 import { AccountModel } from '@/domain/models'
+import { UserNotFoundError } from '@/domain/errors/user-not-found-error'
 
 export class RemoteAuthentication implements Authentication {
   constructor (
@@ -18,6 +19,8 @@ export class RemoteAuthentication implements Authentication {
     switch (httpResponse.statusCode) {
       case HttpStatusCode.ok: return httpResponse.body
       case HttpStatusCode.unauthorized: throw new InvalidCredentialsError()
+      case HttpStatusCode.badRequest: throw new UnexpectedError()
+      case HttpStatusCode.notFound: throw new UserNotFoundError()
       default: throw new UnexpectedError()
     }
   }

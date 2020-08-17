@@ -6,6 +6,7 @@ import { Input, Logo, FormStatus } from '@/presentation/components'
 import Context from '@/presentation/contexts/form/form-context'
 import { Validation } from '@/presentation/protocols/validation'
 import { Authentication } from '@/domain/usecases'
+import Crypto from '@/infra/encrypt/crypto-encrypt'
 
 type Props = {
   validation: Validation
@@ -42,10 +43,11 @@ const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
         ...state,
         isLoading: true
       })
+      const passEncrypter = new Crypto()
       const account = await authentication.auth({
         idType: 'Email',
         idValue: state.email,
-        password: state.password,
+        password: passEncrypter.encrypted(state.password),
         platform: 'web'
       })
       localStorage.setItem('accessToken', account.accessToken)
