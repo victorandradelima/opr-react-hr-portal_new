@@ -7,6 +7,7 @@ import { render, RenderResult, cleanup, fireEvent, waitFor } from '@testing-libr
 import { ValidationStub, AuthenticationSpy } from '@/presentation/test'
 import { Login } from '@/presentation/pages'
 import { InvalidCredentialsError } from '@/domain/errors'
+import Crypto from '@/infra/encrypt/crypto-encrypt'
 
 type SutTypes = {
   sut: RenderResult
@@ -138,11 +139,12 @@ describe('Login Component', () => {
     const { sut, authenticationSpy } = makeSut()
     const email = faker.internet.email()
     const password = faker.internet.password()
+    const encrypter = new Crypto()
     await simulateValidSubmit(sut, email, password)
     expect(authenticationSpy.params).toEqual({
       idType: 'Email',
       idValue: email,
-      password: password,
+      password: encrypter.encrypted(password),
       platform: 'web'
     })
   })
